@@ -23,4 +23,11 @@ $(window).scroll(function() {
       }, 700 * Math.exp(i * 0.14) - 700);
     });
   }
+
+  if (wScroll > $(".large-window").offset().top - $("window").height()) {
+    console.log("hii");
+    $(".large-window").css({
+      "background-position": "center" + wScroll + "px"
+    });
+  }
 });
