@@ -26,10 +26,24 @@ $(window).scroll(function() {
 
   //   Promoscope
 
-  if (wScroll > $(".large-window").offest().top - $("window").height()) {
+  if (wScroll > $(".large-window").offset().top - $("window").height()) {
     $(".large-window").css({
       "background-position":
         "center " + (wScroll - $(".large-window").offset().top) + "px"
     });
+    var opacity =
+      (wScroll - $(".large-window").offset().top + 400) / (wScroll / 4);
+
+    $(".window-tint").css({ opacity: opacity });
   }
+
+  // if(wScroll > $('.large-window').offset().top - $(window).height()){
+
+  //     $('.large-window').css({'background-position':'center '+ (wScroll - $('.large-window').offset().top) +'px'});
+
+  //     var opacity = (wScroll - $('.large-window').offset().top + 400) / (wScroll / 5);
+
+  //     $('.window-tint').css({'opacity': opacity});
+
+  //   }
 });
