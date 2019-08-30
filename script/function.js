@@ -23,9 +23,13 @@ $(window).scroll(function() {
       }, 700 * Math.exp(i * 0.14) - 700);
     });
   }
+
+  //   Promoscope
+
   if (wScroll > $(".large-window").offest().top - $("window").height()) {
     $(".large-window").css({
-      "background-position": "center" + wScroll + "px"
+      "background-position":
+        "center " + (wScroll - $(".large-window").offset().top) + "px"
     });
   }
 });
