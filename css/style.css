@@ -4,6 +4,14 @@
   font-family: "Sawarabi Gothic", sans-serif;
 }
 
+.main-div {
+  background: white;
+  width: 100%;
+  z-index: 0;
+  height: 100%;
+  margin-bottom: 230px;
+}
+
 /* Header */
 .bird-box {
   background: url(../images/bird-bg.jpg);
@@ -13,13 +21,18 @@
   background-attachment: fixed;
   height: 600px;
   overflow: hidden;
+  z-index: 2;
 }
 
 /* Body */
 .body-div {
   padding: 100px 50px;
   max-width: 50%;
-  height: 1000px;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  background: white;
+  background-size: auto 5000px;
 }
 
 .body-div h2 {
@@ -207,5 +220,25 @@
 .blog-posts .post-3 {
   -webkit-transform: translate(100px, 20px);
           transform: translate(100px, 20px);
+}
+
+footer {
+  background: black;
+  color: white;
+  padding: 40px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 250px;
+  display: none;
+}
+
+footer .footer-stuff {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+footer a {
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
